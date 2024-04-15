@@ -16,7 +16,6 @@
 
 ::-webkit-scrollbar-thumb {
     background: hsl(120 100% 20% / 1);
-    /* border: .05em solid hsl(120 25% 50% / 1); */
     border-radius: 100vw;
 }
 
@@ -27,3 +26,16 @@
 body {
     margin-bottom: 70px !important;
 }
+
+@media only screen and (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 1em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    ::-webkit-scrollbar {
+        width: 0.6em;
+    }
+}
+

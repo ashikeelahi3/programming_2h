@@ -36,3 +36,9 @@ i {
         transform: translate(var(--randomX), var(--randomY));
     }
 }
+
+@media (max-width: 425px) {
+    #eid_section h2 {
+        font-size: 2.5em;;
+    }
+}
