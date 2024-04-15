@@ -1,0 +1,38 @@
+
+#eid_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: #222;
+    overflow: hidden;
+}
+
+#eid_section h2 {
+    color: #333;
+    font-size: 5em;
+    user-select: none;
+    text-align: center;
+}
+
+i {
+    position: absolute;
+    background: #fff;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: eid_spark 2s ease-out forwards;
+}
+@keyframes eid_spark {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--randomX), var(--randomY));
+    }
+}

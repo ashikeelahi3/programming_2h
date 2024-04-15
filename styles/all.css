@@ -1,0 +1,25 @@
+::selection {
+    background: rgb(99, 0, 99);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 1.5em;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(120 50% 75% / 1);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(120 100% 20% / 1);
+    /* border: .05em solid hsl(120 25% 50% / 1); */
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(120 100% 10% / 1);
+}

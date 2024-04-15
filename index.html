@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ashik E Elahi" />
+
+    <title>NavBar</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/r_programming.css">
+</head>
+
+<body>
+    <!-- navigation -->
+    <section id="navbar">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./images/icons/home.png" alt="Home">
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./images/icons/diagram.png" alt="Order">
+                        </span>
+                        <span class="text">Order Stat.</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./images/icons/r.png" alt="R">
+                        </span>
+                        <span class="text">R Prog.</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./images/icons/python.png" alt="Python">
+                        </span>
+                        <span class="text">Python</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./images/icons/user.png" alt="Me">
+                        </span>
+                        <span class="text">About Me</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+                <div class="indicator2"></div>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Home -->
+    <section id="home" class="pages active_page">
+        <div id="eid_section">
+            <h2>Eid Mubarak</h2>
+        </div>
+    </section>
+
+    <!-- Order Statistics -->
+    <section id="order" class="pages">
+        <iframe src="./pages/distribution_and_order_statistics.html" frameborder="0" id="iOrder" class="iframe"></iframe>
+    </section>
+
+    <!-- R Programming -->
+    <section id="r" class="pages">
+        <iframe src="./pages/Practical_Session_5_R.html" frameborder="0" id="iR" class="iframe"></iframe>
+    </section>
+
+    <!-- Python -->
+    <section id="python" class="pages">
+        <iframe src="./pages/python.html" frameborder="0" id="iPython" class="iframe"></iframe>
+    </section>
+
+    <!-- Me  -->
+    <section id="me" class="pages">
+        Nothing...
+    </section>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/home.js"></script>
+    
+    
+</body>
+
+</html>
