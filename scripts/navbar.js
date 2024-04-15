@@ -13,6 +13,7 @@ function activeLink() {
             pages[index].classList.add('active_page')
             if(index == 1) {
                 let order = document.getElementById('order')
+                order.removeChild(order.firstElementChild);
                 let iframe = document.createElement('iframe')
                 iframe.src = "./pages/distribution_and_order_statistics.html"
                 iframe.id = "iOrder"
@@ -20,6 +21,7 @@ function activeLink() {
                 order.appendChild(iframe)
             } else if(index == 2) {
                 let R = document.getElementById('r')
+                R.removeChild(R.firstElementChild);
                 let iframe = document.createElement('iframe')
                 iframe.src = "./pages/Practical_Session_5_R.html"
                 iframe.id = "iR"
