@@ -20,7 +20,7 @@ function activeLink() {
                     iframe.id = "iOrder"
                     iframe.classList = "iframe"
                     order.appendChild(iframe)
-                }, 3000)
+                }, 1000)
             } else if(index == 2) {
                 setTimeout(() => {
                     let R = document.getElementById('r')
@@ -30,7 +30,7 @@ function activeLink() {
                     iframe.id = "iR"
                     iframe.classList = "iframe"
                     R.appendChild(iframe)
-                })
+                }, 1000)
             }
         } else {
             pages[index].classList.remove('active_page')

@@ -87,12 +87,95 @@
 
     <!-- Me  -->
     <section id="me" class="pages">
-        Nothing...
+        <div class="container" id="sIn">
+            <button type="button" class="btn" id="signIn">Sign In With Google</button>
+        </div>
+        <div class="container" id="sOut">
+            <img src="" alt="" id="uImg">
+            <h1 id="username"></h1>
+            <h5 id="userEmail"></h5>
+            <button type="submit" id="signOut" class="btn">Sign Out</button>
+        </div>
     </section>
     <script src="./scripts/navbar.js"></script>
     <!-- <script src="./scripts/home.js"></script> -->
     
     
+    <script type="module">
+        import { initializeApp} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import {getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyA6CAcfGpYelmyzTXuXQGcnBMUTeSFtEk8",
+          authDomain: "programming-2h.firebaseapp.com",
+          projectId: "programming-2h",
+          storageBucket: "programming-2h.appspot.com",
+          messagingSenderId: "842443215909",
+          appId: "1:842443215909:web:36b30d4e3e1312c7995bcc"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const user = auth.currentUser;
+
+        auth.languageCode = 'en'
+        var provider = new GoogleAuthProvider();
+
+        let signInBtn = document.getElementById("signIn")
+
+        signInBtn.addEventListener("click", () => {
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    const credentials = GoogleAuthProvider.credentialFromResult(result);
+                    const user = result.user;
+                    console.log("User: " + user)
+                })
+                .catch((error) => {
+                    const errorCode = error.code 
+                    const errorMessage = error.message
+
+                    console.log(errorCode)
+                    console.log(errorMessage);
+                });
+        });
+
+        function updateUserProfile(user) {
+            const userName = user.displayName;
+            const userEmail = user.email;
+            const userDP = user.photoURL;
+
+            
+
+            document.getElementById("username").innerText = userName
+            document.getElementById("userEmail").innerText = userEmail
+            document.getElementById("uImg").setAttribute("src", userDP)
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            let sIn = document.getElementById("sIn");
+            let sOut = document.getElementById("sOut")
+            if(user) {
+                updateUserProfile(user)
+                const uid = user.uid;
+                sIn.style.display = "none"
+                sOut.style.display = "flex"
+                return uid;
+            } else {
+                sIn.style.display = "flex"
+                sOut.style.display = "none"
+            }
+        })
+
+        let signOutBtn = document.getElementById("signOut")
+
+        signOutBtn.addEventListener("click", () => {
+            signOut(auth).then(() => {
+            }).catch((error) => {
+                console.log(error);
+            }); 
+            console.log("hi");     
+        });
+      </script>
 </body>
 
 </html>
