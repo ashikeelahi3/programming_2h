@@ -163,9 +163,11 @@
                 const uid = user.uid;
                 sIn.style.display = "none"
                 sOut.style.display = "flex"
-                if(index > 0 && index < 4) {
-                    item.classList.remove("disabledItem")
-                }
+                list.forEach((item, index) => {
+                    if(index > 0 && index < 4) {
+                        item.classList.remove("disabledItem")
+                    }
+                })
                 return uid;
             } else {
                 sIn.style.display = "flex"
@@ -184,8 +186,7 @@
             signOut(auth).then(() => {
             }).catch((error) => {
                 console.log(error);
-            }); 
-            console.log("hi");     
+            });     
         });
       </script>
 </body>
