@@ -117,7 +117,8 @@
     
     #time {
         transform: scale(0.85);
-        gap: 20px;
+        /* gap: 20px; */
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
