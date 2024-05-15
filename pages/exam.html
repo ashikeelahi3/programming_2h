@@ -8,6 +8,7 @@
 </head>
 <body>
     <section id="countdown">
+        <h4 id="eText">Upcoming Exam</h4>
         <div id="time">
             <div class="circle" style="--clr:#1eb9ff;">
                 <svg>
@@ -34,7 +35,7 @@
                 <div id="seconds">00<br><span>Seconds</span></div>
             </div>
         </div>
-        <h2 class="countdownText"><span>Best of Luck</span></h2> 
+        <h2 class="countdownText"><span>Best of Luck for practical exam</span></h2> 
 
     </section>
 
@@ -51,13 +52,19 @@
         let mm = document.getElementById('mm')
         let ss = document.getElementById('ss')
 
-        let endDate = '05/26/2024 00:00:00';
+        let examDate = ['05/30/2024', '06/05/2024', '07/03/2024', '07/08/2024', '07/13/2024', '07/20/2024', '07/24/2024', '07/28/2024']
         // mm/dd/yyyy
 
         let x = setInterval(function () {
-            let end = new Date(endDate).getTime()
-            let countDown = new Date().getTime()
-            let distance = end - countDown;
+            for(let i = 0; i <examDate.length; i++) {
+                let end = new Date(`${examDate[i]} 09:30:00`).getTime()
+                let countDown = new Date().getTime()
+                var distance = end - countDown;
+
+                if(distance > 0) {
+                    break;
+                }
+            }
 
             // time calculation for days, hours, minutes, seconds
             let d = Math.floor(distance / (1000*60*60*24))
