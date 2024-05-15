@@ -102,3 +102,13 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
+#resource {
+    margin-top: 10px;
+    background-color: green;
+}
+
+#resource a {
+    color: #fff;
+    text-decoration: none;
+}
