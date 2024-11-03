@@ -57,7 +57,7 @@
 
         let x = setInterval(function () {
             for(let i = 0; i <examDate.length; i++) {
-                let end = new Date(`${examDate[i]} 13:00:00`).getTime()
+                let end = new Date(`${examDate[i]} 00:00:00`).getTime()
                 let countDown = new Date().getTime()
                 var distance = end - countDown;
 
