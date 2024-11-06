@@ -88,7 +88,7 @@
     <!-- Me  -->
     <section id="me" class="pages">
         <div class="container" id="sIn">
-            <p style="margin-bottom: 7px; font-size: 1em; text-align: center;">Please sign in to get full access...</p>
+            <!-- <p style="margin-bottom: 7px; font-size: 1em; text-align: center;">You don't need to sign in to get full access...</p> -->
             <button type="button" class="btn" id="signIn">Sign In With Google</button>
             <button type="button" class="btn" id="youTube"><a href="https://youtube.com/playlist?list=PL0wvjFCZcyZDTTFsInTHL0Mjh3o3QLnYg&si=iV8RPt06J3UYgu2B">MS Excel Videos</a></button>
         </div>
@@ -168,7 +168,7 @@
                 sOut.style.display = "flex"
                 list.forEach((item, index) => {
                     if(index > 0 && index < 4) {
-                        // item.classList.remove("disabledItem")
+                        // item.classList.remove("disabledItem")  #for full access
                     }
                 })
                 return uid;
@@ -177,7 +177,7 @@
                 sOut.style.display = "none"
                 list.forEach((item, index) => {
                     if(index > 0 && index < 4) {
-                        item.classList.add("disabledItem")
+                        // item.classList.add("disabledItem")   # for full access 
                     }
                 })
             }
