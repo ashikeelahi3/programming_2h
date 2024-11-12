@@ -93,12 +93,12 @@ body {
 }
 
 
-#youTube {
+.youTube {
     margin-top: 10px;
-    background-color: red;
+    background-color: red !important;
 }
 
-#youTube a {
+.youTube a {
     color: #fff;
     text-decoration: none;
 }
