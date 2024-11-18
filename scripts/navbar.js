@@ -16,7 +16,7 @@ function activeLink() {
                     let order = document.getElementById('order')
                     order.removeChild(order.firstElementChild);
                     let iframe = document.createElement('iframe')
-                    iframe.src = "./pages/distribution_and_order_statistics.html"
+                    iframe.src = "./pages/Sampling-Distributions-and-Order-Statistics.html"
                     iframe.id = "iOrder"
                     iframe.classList = "iframe"
                     order.appendChild(iframe)
